@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Ground
   - Box
+  - Traps
+  - Destructable
+  - Diamond
+  - Heart
   layers:
   - Default
   - TransparentFX
@@ -13,9 +17,9 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Enemy
+  - Player
+  - Destructable
   - 
   - 
   - 
@@ -40,6 +44,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: 4
+    uniqueID: 2431472421
+    locked: 0
+  - name: 3
+    uniqueID: 605629923
+    locked: 0
+  - name: 2
+    uniqueID: 2236063049
+    locked: 0
+  - name: 1
+    uniqueID: 3116260903
+    locked: 0
   - name: TileStuffs
     uniqueID: 2121522539
     locked: 0
@@ -54,6 +70,9 @@ TagManager:
     locked: 0
   - name: Grass
     uniqueID: 3776729533
+    locked: 0
+  - name: VFX
+    uniqueID: 2351986329
     locked: 0
   m_RenderingLayers:
   - Default

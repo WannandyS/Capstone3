@@ -11,6 +11,10 @@ public class Follow : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.instance.isPlayerAlive == false)
+        {
+            return;
+        }
         transform.Translate(Vector2.right * Time.deltaTime * player.moveSpeed);
     }
 }

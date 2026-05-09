@@ -130,6 +130,7 @@ public class Player : MonoBehaviour
         //animator.SetTrigger("Death");
         Destroy(this.gameObject);
         GameObject tempEffect = Instantiate(explosionPrefab, explosionPoint.position, Quaternion.identity);
+        GameManager.instance.TriggerPanel();
         Destroy(tempEffect, 1f);
         FindAnyObjectByType<GameManager>().isPlayerAlive = false;
         CameraShake.instance.Shake();

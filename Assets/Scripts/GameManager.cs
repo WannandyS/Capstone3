@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public bool isPlayerAlive;
+    public GameObject panel;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,11 +18,18 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
         }
+
+        panel.transform.localPosition = new Vector3(0, -1500f, 0);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TriggerPanel()
     {
-        
+        FindAnyObjectByType<ScoreManager>().SetHighScore();
+        panel.LeanMoveLocalY(0, .8f).setEaseOutExpo();
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

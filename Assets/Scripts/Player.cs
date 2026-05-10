@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
         moveSpeed += acceleration * Time.deltaTime;
         transform.Translate(Vector2.right * Time.deltaTime * moveSpeed);
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.K))
         {
             Jump();
         }
@@ -67,7 +67,7 @@ public class Player : MonoBehaviour
             isGround = false;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKey(KeyCode.J))
         {
             StartCoroutine(Shoot());
         }

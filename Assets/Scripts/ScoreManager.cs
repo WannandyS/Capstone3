@@ -19,7 +19,7 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetKey(KeyCode.L))
         {
             DeleteSaveData();
         }
